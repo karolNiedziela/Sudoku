@@ -1,0 +1,294 @@
+body {
+    color: black;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+    text-align: center;
+    background: #333333;
+    color: white;
+}
+
+.navbar a.navbar-brand {
+    font-size: 25px;
+}
+
+a.nav-item {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14pt;
+    letter-spacing: 2px;
+    align-items: right;
+}
+
+.navbar .nav-item:hover {
+    color: lightblue;
+}
+
+.container-1 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-1 img {
+    width: 300px;
+    height: 300px;
+}
+
+.image-description {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.info-hidden {
+    display: none;
+}
+
+#setup-game {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+#setup-game>div {
+    display: flex;
+    align-items: center;
+}
+
+#play {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.btn {
+    background: lightblue;
+}
+
+#play-btn {
+    font-size: 20pt;
+    padding: 10px 20px 10px 20px;
+}
+
+.btn:hover {
+    background: darkcyan;
+}
+
+#stats {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 600px;
+    height: 600px;
+}
+
+label {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 16pt;
+}
+
+.cell {
+    width: 65px;
+    height: 65px;
+    border: 1px solid #9f7462;
+    border-radius: 20%;
+    text-align: center;
+    margin: 0px;
+    font-size: 30pt;
+}
+
+.cell-empty {
+    cursor: pointer;
+}
+
+.cell-empty:hover {
+    background: #c09685;
+}
+
+.rightBorder {
+    border-right: 5px solid #9f7462;
+}
+
+.bottomBorder {
+    border-bottom: 5px solid #9f7462;
+}
+
+#number-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20%;
+    height: 50%;
+    margin-top: 10px;
+}
+
+#number-container>p {
+    border: 2px solid #9f7462;
+    border-radius: 10%;
+    font-size: 22pt;
+    text-align: center;
+    margin-left: 5px;
+    justify-content: center;
+    cursor: pointer;
+    flex: 1 0 28%;
+}
+
+#number-container>p:hover {
+    background: #c09685;
+}
+
+#features>button {
+    margin-left: 5px;
+    font-size: 15pt;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+p.selected,
+p.hinted {
+    background-color: #c09685;
+    color: black;
+}
+
+p.incorrect {
+    color: red;
+}
+
+@media (max-width: 940px) {
+    #stats {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 13px;
+    }
+    label {
+        padding-top: 5px;
+        font-size: 9pt;
+    }
+    #play-btn {
+        font-size: 10pt;
+        padding: 7px 15px 7px 15px;
+    }
+    #game {
+        width: 80%;
+    }
+    #board {
+        width: 320px;
+        height: 320px;
+    }
+    #stats {
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .cell {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #9f7462;
+        border-radius: 20%;
+        text-align: center;
+        margin: 0px;
+        font-size: 15pt;
+    }
+    #number-container>p {
+        border: 2px solid #9f7462;
+        border-radius: 20%;
+        font-size: 11pt;
+        text-align: center;
+        margin-left: 2px;
+        justify-content: center;
+        cursor: pointer;
+        flex: 1 0 28%;
+    }
+    #features>button {
+        margin-left: 5px;
+        font-size: 7pt;
+        padding: 6px;
+    }
+    .rightBorder {
+        border-right: 3px solid #9f7462;
+    }
+    .bottomBorder {
+        border-bottom: 3px solid #9f7462;
+    }
+}
+
+@media (max-width: 495px) {
+    .container-1 img {
+        width: 200px;
+        height: 200px;
+    }
+    #stats {
+        font-size: 10px;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 10px;
+    }
+    label {
+        font-size: 5pt;
+    }
+    #play-btn {
+        font-size: 8pt;
+        padding: 5px 12px 5px 12px;
+    }
+    #game {
+        width: 90%;
+    }
+    #board {
+        width: 210px;
+        height: 210px;
+    }
+    .cell {
+        width: 22px;
+        height: 22px;
+        border: 1px solid #9f7462;
+        border-radius: 10%;
+        text-align: center;
+        margin: 0px;
+        font-size: 10pt;
+    }
+    #number-container>p {
+        border: 2px solid #9f7462;
+        border-radius: 10%;
+        font-size: 8pt;
+        text-align: center;
+        margin-left: 2px;
+        justify-content: center;
+        cursor: pointer;
+        flex: 1 0 28%;
+    }
+    .rightBorder {
+        border-right: 3px solid #9f7462;
+    }
+    .bottomBorder {
+        border-bottom: 3px solid #9f7462;
+    }
+    #features>button {
+        margin-left: 5px;
+        font-size: 6pt;
+        padding: 2px;
+    }
+}

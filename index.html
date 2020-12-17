@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="static/js/index.js"></script>
+    <title>Sudoku</title>
+</head>
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand">Sudoku</a>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-item" onclick="info()">Info</a>
+        </li>
+    </ul>
+
+
+</nav>
+
+<body>
+    <div class="container-1">
+        <div id="info" class="info-hidden">
+            <p class="text-md-left">
+                <b>Sudoku</b> is a puzzle game designed for a single player, much like a crossword puzzle. The puzzle itself is nothing more than a grid of little boxes called “cells”. They are stacked nine high and nine wide, making 81 cells total. The
+                puzzle comes with some of the cells (usually less than half of them) already filled in, like this:
+            </p>
+            <img src="data:image/png;base64,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"
+                alt="">
+            <p class="image-description">
+                Each little square is called a "cell." Most often, Sudoku cells are filled with numbers (1-2-3-4-5-6-7-8-9)
+            </p>
+        </div>
+    </div>
+    <div id="setup-game">
+        <div id="diff">
+            <h2>Choose difficulty: </h2>
+            <label><input id="diff-1" type="radio" name="diff" value="easy" checked> Easy</label>
+            <label><input id="diff-2" type="radio" name="diff" value="medium"> Medium</label>
+            <label><input id="diff-3" type="radio" name="diff" value="hard"> Hard</label>
+        </div>
+        <div id="time">
+            <h2>Choose time: </h2>
+            <label><input id="time-1" type="radio" name="time" value="three" checked> 7 Min</label>
+            <label><input id="time-2" type="radio" name="time" value="five"> 15 Min</label>
+            <label><input id="time-3" type="radio" name="time" value="ten"> 20 Min</label>
+        </div>
+    </div>
+    <div id="play">
+        <button class="btn" id="play-btn">Play</button>
+    </div>
+    <div id="stats">
+        <p id="timer"></p>
+        <p id="errors"></p>
+        <p id="hints"></p>
+    </div>
+    <div id="game">
+        <div id="board"></div>
+        <div id="number-container" hidden>
+            <p id="one">1</p>
+            <p id="two">2</p>
+            <p id="three">3</p>
+            <p id="four">4</p>
+            <p id="five">5</p>
+            <p id="six">6</p>
+            <p id="seven">7</p>
+            <p id="eight">8</p>
+            <p id="nine">9</p>
+            <div id="features" hidden>
+                <button class="btn" id="pause-btn">Stop</button>
+                <button class="btn" id="hint-btn">Hint</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
